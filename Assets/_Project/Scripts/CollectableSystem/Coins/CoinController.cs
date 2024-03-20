@@ -1,13 +1,13 @@
 using System;
 using UnityEngine;
 
-public class CoinController : CollectableController
+public class CoinController : MonoBehaviour, ICollectable
 {
+    [SerializeField] private CollectableData _collectableData;
     public static event Action<int> OnCoinCollected;
 
-    protected override void Collect()
+    public void Collect()
     {
-        Debug.Log("Coin Collected");
         OnCoinCollected?.Invoke(_collectableData.points);
     }
 }
