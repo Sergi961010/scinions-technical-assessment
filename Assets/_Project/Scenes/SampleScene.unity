@@ -1142,8 +1142,8 @@ MonoBehaviour:
   - {fileID: 1051597639}
   - {fileID: 189942998}
   _collectableData: {fileID: 11400000, guid: 99c1a92bb21d8a14b8ee2fb1ab8fae1e, type: 2}
-  _minSpawnInterval: 2
-  _maxSpawnInterval: 3
+  _minSpawnInterval: 1
+  _maxSpawnInterval: 5
 --- !u!4 &599937873
 Transform:
   m_ObjectHideFlags: 0
