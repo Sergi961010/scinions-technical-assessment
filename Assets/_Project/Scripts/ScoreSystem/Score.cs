@@ -6,7 +6,8 @@ public class Score : MonoBehaviour
     private int _score = 0, _highScore;
     private void Awake()
     {
-        _highScore = PlayerPrefs.GetInt("HighScore", 0);
+        _highScore = SaveSystem.LoadInt("HighScore");
+        _displayScore.UpdateHighScore(_highScore);
     }
     private void OnEnable()
     {
@@ -23,6 +24,7 @@ public class Score : MonoBehaviour
         {
             _highScore = _score;
             _displayScore.UpdateHighScore(_highScore);
+            SaveSystem.SaveInt("HighScore", _highScore);
         }
         _displayScore.UpdateScore(_score);
     }
