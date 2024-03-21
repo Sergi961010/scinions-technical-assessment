@@ -8,6 +8,7 @@ public class CoinController : MonoBehaviour, ICollectable
 
     public void Collect()
     {
+        Destroy(gameObject);
         OnCoinCollected?.Invoke(_collectableData.points);
     }
 }
